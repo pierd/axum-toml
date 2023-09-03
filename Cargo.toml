@@ -1,0 +1,18 @@
+[package]
+name = "axum-toml"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kuba Jaroszewski <jakub.jaroszewski@gmail.com>"]
+description = "Axum extractor for TOML"
+repository = "https://github.com/pierd/axum-toml"
+homepage = "https://github.com/pierd/axum-toml"
+keywords = ["axum", "toml"]
+categories = ["web-programming"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+axum = { version = "0.6", features = ["headers"] }
+serde = { version = "1" }
+thiserror = "1.0.48"
+toml = "0.7"
