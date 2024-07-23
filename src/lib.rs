@@ -11,7 +11,7 @@ const TOML_MIME: &str = "application/toml";
 const TEXT_UTF8_MIME: &str = "text/plain; charset=utf-8";
 
 #[derive(Debug, thiserror::Error)]
-enum TomlRejection {
+pub enum TomlRejection {
     #[error("Failed to deserialize the request body")]
     DeserializationError(#[from] toml::de::Error),
     #[error("Request body didn't contain valid UTF-8")]
@@ -35,7 +35,7 @@ impl IntoResponse for TomlRejection {
     }
 }
 
-struct Toml<T>(pub T);
+pub struct Toml<T>(pub T);
 
 #[async_trait]
 impl<T, S, B> FromRequest<S, B> for Toml<T>

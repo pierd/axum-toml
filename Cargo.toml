@@ -1,6 +1,6 @@
 [package]
 name = "axum-toml"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Kuba Jaroszewski <jakub.jaroszewski@gmail.com>"]
 description = "Axum extractor for TOML"
@@ -13,6 +13,6 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 axum = { version = "0.6", features = ["headers"] }
-serde = { version = "1" }
-thiserror = "1.0.48"
-toml = "0.7"
+serde = "1"
+thiserror = "1"
+toml = "0.8"
